@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#relogio{
+    font-size: 100px;
+}
+
+#box-contagem{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h2{
+    font-weight: 100;
+    font-size: 2em;
+    font-style: italic;
+}
+
+.hidden{
+    display: none;
+}
+
+#virada{
+    width: 100vw;
+    height: 100vh;
+    background: url('ANO.png') center no-repeat;
+}
+
+#virada img{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}

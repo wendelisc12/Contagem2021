@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="responsive.css">
+    <script>
+
+
+        function relogio(){
+            var data = new Date()
+            var horas = data.getHours()
+            var minutos = data.getMinutes()
+            var segundos = data.getSeconds()
+            var divVirada = document.getElementById("virada")
+            var xuxa = new Audio('xuxa.mp3');
+
+            if(horas < 10){
+                horas = "0"+horas
+            }
+            
+            if(minutos < 10){
+                minutos = "0"+minutos
+            }
+
+            if(segundos < 10){
+                segundos = "0"+segundos
+            }
+
+            document.getElementById("relogio").innerHTML=horas+":"+minutos+":"+segundos
+       
+
+            if(horas == 00 & minutos == 00 & segundos == 00){
+                divVirada.classList.remove("hidden")
+                xuxa.play()
+            }
+        }
+    
+        window.setInterval("relogio()", 1000)
+
+    </script>
+</head>
+    <body>
+
+        <div id="virada" class="hidden">
+            <img src="fireworks3.gif" alt="">
+        </div>
+        <div id="box-contagem">
+            <h2>Contagem para 2021</h2>
+            <div id="relogio">
+            </div>
+        </div>
+    
+    </body>
+</html>
