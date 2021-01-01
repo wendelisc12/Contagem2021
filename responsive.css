@@ -1,4 +1,6 @@
-body{
+
+@media (max-width: 575.98px) {
+    body{
     overflow-y: hidden;
     overflow-x: hidden;
 }
@@ -14,3 +16,27 @@ body{
 h2{
     font-size: 1.5em;
 }
+
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#virada{
+    background-size: 800px;
+}
+
+#relogio{
+    font-size: 60px
+}
+
+h2{
+    font-size: 1.5em;
+}
+
+}
+
